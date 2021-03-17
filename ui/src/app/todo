@@ -1,0 +1,6 @@
+- create model & service folders
+
+
+- use notifications instead of polling
+
+- intercept errors
