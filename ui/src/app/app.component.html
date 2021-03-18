@@ -1,9 +1,23 @@
-<div class="container">
+<div class="container" style="margin-left: 200px;">
   <div class="row">
     <div class="col-md-12">
       <div class="card bg-dark my-5">
         <div class="card-body">
           <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+
+          <form (ngSubmit)="onSubmit()" #participantForm="ngForm" autocomplete="off">
+            <div class="form-group">
+              <input type="text" [(ngModel)]="topic" 
+                class="form-control topic-name" 
+                id="name" 
+                name="name" 
+                placeholder="No topic set. Please select a topic..."
+                required #name="ngModel">
+                <button type="submit" [disabled]="!participantForm.form.valid" 
+                class="btn btn-info">Set topic</button>
+            </div>
+          </form>
+      
           <ul class="text-center list-inline py-3">
             <li class="list-inline-item">
               <a routerLink="/participants" class="btn btn-info">List participants</a>

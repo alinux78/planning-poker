@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ParticipantListComponent } from './participant-list/participant-list.component';
 import { ParticipantService } from './participant.service';
+import { VotingService } from './voting.service';
 import { ParticipantFormComponent } from './participant-form/participant-form.component';
 
 @NgModule({
@@ -21,7 +22,7 @@ import { ParticipantFormComponent } from './participant-form/participant-form.co
     FormsModule,
     AppRoutingModule
   ],
-  providers: [ParticipantService],
+  providers: [ParticipantService, VotingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
