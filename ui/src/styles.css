@@ -2,3 +2,33 @@
 body {
     background-color: #35654d
 }
+
+.bg-danger {
+    background-color: #e74c3c;
+}
+
+.cards{
+    height: 8em;
+    width: 7em;
+    border-radius: 0.5em;
+    border: 0.16em solid;
+    border-color: aliceblue;
+}
+
+.participant-name {
+    margin-bottom: 10px;
+    width: 6em;
+    color: #3498DB;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x:auto;
+    overflow-wrap: break-word;
+    text-overflow: clip;
+    text-align: center;
+}
+
+.card-cell{
+    float: left;
+    margin: 10px;;
+}
+

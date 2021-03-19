@@ -1,15 +1,14 @@
 <div class="card my-5">
   <div class="card-body">
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped cards-table">
       <thead class="thead-dark">
-        <tr>
-          <th scope="col">Name</th>
-        </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let p of participants">
-          <td>{{ p.name }}</td>
-        </tr>
+        <tr>
+        <td *ngFor="let p of participants" class="card-cell">
+          <div class="participant-name">{{ p.name }}</div><div data-card="5" class="bg-danger cards"><p></p></div>
+        </td>
+      </tr>
       </tbody>
     </table>
   </div>
