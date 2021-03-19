@@ -17,8 +17,8 @@ export class AppComponent {
   constructor(private router: Router, 
     private votingService: VotingService) {
     this.title = 'Planning poker';
-    let me = this;
     votingService.getTopic().subscribe(result => this.topic = result.name);
+    this.router.navigate(['/participants']);
   }
 
   onSubmit() {

@@ -1,8 +1,7 @@
 <div class="card my-5">
-  <div class="card-body">
+  <div class="card-body" class="add-participant-box">
     <form (ngSubmit)="onSubmit()" #participantForm="ngForm">
-      <div class="form-group">
-        <label for="name">Name</label>
+      <div class="form-group" style="margin-bottom: 10px;">
         <input type="text" [(ngModel)]="participant.name" 
           class="form-control" 
           id="name" 
@@ -10,9 +9,8 @@
           placeholder="Enter your name"
           required #name="ngModel">
       </div>
-      <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
-      <button type="submit" [disabled]="!participantForm.form.valid" 
-        class="btn btn-info">Submit</button>
+      <button type="submit" [disabled]="!participantForm.form.valid" class="btn btn-info add-participant">Join</button>
+      <button type="submit" class="btn btn-info" style="margin-left: 10px;">Cancel</button>
     </form>
   </div>
 </div>
