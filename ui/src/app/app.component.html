@@ -1,27 +1,28 @@
 <div class="container">
 
   <div class="col-md-12">
-    <div class="title">
-      <span style='color: blue'>P</span>
-      <span style='color: red'>l</span>
-      <span style='color: yellow'>a</span>
-      <span style='color: blue'>n</span>
-      <span style='color: green'>n</span>
-      <span style='color: blue'>i</span>
-      <span style='color: red'>n</span>
-      <span style='color: yellow'>g</span>
-      <span style='margin-left: 20px;color: blue'>P</span>
-      <span style='color: red'>o</span>
-      <span style='color: yellow'>k</span>
-      <span style='color: blue'>e</span>
-      <span style='color: green'>r</span>
-    </div>
-  
+
+    <div>
+      <!-- <div class="title">
+        <span style='color: blue'>P</span>
+        <span style='color: red'>l</span>
+        <span style='color: yellow'>a</span>
+        <span style='color: blue'>n</span>
+        <span style='color: green'>n</span>
+        <span style='color: blue'>i</span>
+        <span style='color: red'>n</span>
+        <span style='color: yellow'>g</span>
+        <span style='margin-left: 20px;color: blue'>P</span>
+        <span style='color: red'>o</span>
+        <span style='color: yellow'>k</span>
+        <span style='color: blue'>e</span>
+        <span style='color: green'>r</span>
+      </div> -->
+
     <div class="row" class="main-container;">
       <div class="card bg-dark my-5" style="margin-top: 10px;">
   
-        <div class="card-body">
-  
+        <div class="topic-card">
           <form (ngSubmit)="onSubmit()" #participantForm="ngForm" autocomplete="off">
             <div class="form-group">
               <input type="text" [(ngModel)]="topic" 
@@ -31,25 +32,13 @@
                 placeholder="No topic set. Please select a topic..."
                 required #name="ngModel">
                 <button type="submit" [disabled]="!participantForm.form.valid" 
-                class="btn btn-info">Set topic</button>
-            </div>
+                class="set-topic-btn">Set topic</button>
+              </div>
           </form>
         </div>
-        <div class="card-selection">
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">0</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">1/2</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">1</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">2</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">3</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">5</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">8</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">13</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">20</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">40</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">100</button></div>
-          <div class="col-md-1 col-xs-2"><button type="button" class="btn btn-default card-selection-button">?</button></div>
-        </div>
-        &nbsp;
+    
+        <div>&nbsp;</div>
+      </div>
       </div>
       <router-outlet></router-outlet>
 

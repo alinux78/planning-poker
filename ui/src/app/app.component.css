@@ -5,20 +5,19 @@
     vertical-align: middle;
 }
 
+.topic-card {
+    margin-top: 4%;
+    width: 90%;
+}
 .topic-name {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 18px;
-    height: 30px;
-    width: 460px;
-    margin-left: 80px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+    font-size: 1em;
+    height: 32px;
+    width: 90%;
+    border: rgb(99, 131, 180) 3px solid;
 }
 
-.btn {
+.set-topic-btn {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-    height: 30px;
-    margin-left: 10px;
-    margin-top: 4px;
+    height: 32px;
 }
