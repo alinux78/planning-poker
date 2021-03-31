@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Participant } from '../participant';
 import { ParticipantService } from '../participant.service';
+import { getCurrentParticipant as getCurrent} from '../app.component';
 
 @Component({
   selector: 'app-participant-list',
   templateUrl: './participant-list.component.html',
-  styleUrls: ['./participant-list.component.css']
+  styleUrls: []
 })
 export class ParticipantListComponent implements OnInit {
 
@@ -27,5 +28,9 @@ export class ParticipantListComponent implements OnInit {
         .subscribe(data => {
             this.participants = data;
         });
+  }
+
+  getCurrentParticipant() {
+    return getCurrent();
   }
 }

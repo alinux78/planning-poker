@@ -1,0 +1,11 @@
+<div class="card my-5">
+  <div class="card-body" class="add-participant-box">
+    <form (ngSubmit)="onSubmit(true)" >
+      <div class="form-group" style="margin-bottom: 10px;">
+        Are you sure you want to leave ?
+      </div>
+      <button type="submit" (click)="onSubmit(true)">Leave</button>
+      <button type="submit" (click)="onSubmit(false)" class="btn btn-info" style="margin-left: 10px;">Cancel</button>
+    </form>
+  </div>
+</div>

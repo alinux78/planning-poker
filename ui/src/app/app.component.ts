@@ -1,12 +1,22 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { VotingService } from './voting.service';
+import { Participant } from './participant';
 
+export var currentParticipant:Participant = null;
+
+export function setCurrentParticipant(p:Participant) {
+  currentParticipant = p;
+}
+
+export function getCurrentParticipant(): Participant {
+  return currentParticipant;
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: []
 })
 export class AppComponent {
 
@@ -23,6 +33,10 @@ export class AppComponent {
 
   onSubmit() {
     this.votingService.setTopic(this.topic);
+  }
+
+  getCurrentParticipant() {
+    return currentParticipant;
   }
 
 }

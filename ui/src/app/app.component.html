@@ -23,7 +23,7 @@
       <div class="card bg-dark my-5" style="margin-top: 10px;">
   
         <div class="topic-card">
-          <form (ngSubmit)="onSubmit()" #participantForm="ngForm" autocomplete="off">
+          <form (ngSubmit)="onSubmit()" #topicForm="ngForm" autocomplete="off">
             <div class="form-group">
               <input type="text" [(ngModel)]="topic" 
                 class="form-control topic-name" 
@@ -31,7 +31,7 @@
                 name="name" 
                 placeholder="No topic set. Please select a topic..."
                 required #name="ngModel">
-                <button type="submit" [disabled]="!participantForm.form.valid" 
+                <button type="submit" [disabled]="!topicForm.form.valid" 
                 class="set-topic-btn">Set topic</button>
               </div>
           </form>

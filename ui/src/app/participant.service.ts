@@ -17,6 +17,11 @@ export class ParticipantService {
   }
 
   public save(participant: Participant) {
-    return this.http.post<Participant>(this.participantsUrl + "/" + participant.name, "");
+    return this.http.put<Participant>(this.participantsUrl + "/" + participant.name, "");
   }
+
+  public remove(participant: Participant) {
+    return this.http.delete<Participant>(this.participantsUrl + "/" + participant.name);
+  }
+
 }
