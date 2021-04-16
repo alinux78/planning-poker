@@ -1,12 +1,19 @@
 package com.github.alinux78.planningpoker.voting;
 
+import java.util.UUID;
 
 public class Topic {
+	private String id = UUID.randomUUID().toString();
 	private String name;
+	private boolean votingStarted;
 
 	public Topic(String name) {
 		super();
 		this.name = name;
+	}
+
+	public String getId() {
+		return id;
 	}
 
 	public String getName() {
@@ -17,11 +24,20 @@ public class Topic {
 		this.name = name;
 	}
 
+	
+	public boolean isVotingStarted() {
+		return votingStarted;
+	}
+
+	public void setVotingStarted(boolean votingStarted) {
+		this.votingStarted = votingStarted;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -34,15 +50,14 @@ public class Topic {
 		if (getClass() != obj.getClass())
 			return false;
 		Topic other = (Topic) obj;
-		if (name == null) {
-			if (other.name != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}
-	
-	
+
 	
 
 }

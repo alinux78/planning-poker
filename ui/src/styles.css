@@ -114,10 +114,22 @@ body {
     border: rgb(99, 131, 180) 3px solid;
 }
 
+.current-topic {
+    margin-top: 1em;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #91aabb;
+    font-size: 2em;
+}
+
+
 .set-topic-btn {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
     height: 32px;
 }
-        
+    
+
+.voting-start-stop {
+    margin-top: 1em;
+}
 
 

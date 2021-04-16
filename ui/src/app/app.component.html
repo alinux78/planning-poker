@@ -22,19 +22,29 @@
     <div class="row" class="main-container;">
       <div class="card bg-dark my-5" style="margin-top: 10px;">
   
-        <div class="topic-card">
+        <div class="topic-card" *ngIf="!isVotingStarted()">
           <form (ngSubmit)="onSubmit()" #topicForm="ngForm" autocomplete="off">
             <div class="form-group">
               <input type="text" [(ngModel)]="topic" 
                 class="form-control topic-name" 
                 id="name" 
                 name="name" 
-                placeholder="No topic set. Please select a topic..."
+                placeholder="New topic..."
                 required #name="ngModel">
-                <button type="submit" [disabled]="!topicForm.form.valid" 
-                class="set-topic-btn">Set topic</button>
+                <button type="submit" [disabled]="!topicForm.form.valid" class="set-topic-btn">
+                  Set topic
+                </button>
               </div>
           </form>
+        </div>
+      
+        <div class="voting-start-stop">
+          <button *ngIf="!isVotingStarted()" class="add-participant" (click)="startVoting()">Start Voting</button>
+          <button *ngIf="isVotingStarted()" class="add-participant" (click)="stopVoting()">Stop Voting</button>
+        </div>
+
+        <div class="current-topic">
+          <label> {{currentTopic}} </label>
         </div>
     
         <div>&nbsp;</div>
