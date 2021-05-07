@@ -1,0 +1,14 @@
+
+highlight curent user
+
+restore state on (if joined should show joined state)
+
+hide voting buttons if not joined
+
+Voting per participant
+
+show my vote
+
+show results when votting stopped
+
+sort by votes ( smallest first )
