@@ -1,5 +1,5 @@
 
-highlight curent user
+highlight current user
 
 restore state on (if joined should show joined state)
 
@@ -12,3 +12,9 @@ show my vote
 show results when votting stopped
 
 sort by votes ( smallest first )
+
+actuator
+
+lombock
+
+hateos

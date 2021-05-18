@@ -25,8 +25,10 @@ public class ParticipantsController {
 	
 	
 	@PutMapping(path = "/{name}")
-	public void register(@PathVariable(name = "name")String name) {
-		participants.add(new Participant(name));
+	public Participant register(@PathVariable(name = "name")String name) {
+		Participant p = new Participant(name);
+		participants.add(p);
+		return p;
 	}
 
 	@DeleteMapping(path="/{name}")
