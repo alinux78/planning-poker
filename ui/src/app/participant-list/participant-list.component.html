@@ -31,7 +31,9 @@
       <tbody>
         <tr>
         <td *ngFor="let p of participants" class="card-cell">
-          <div class="participant-name">{{ p.name }}</div><div data-card="5" class="bg-danger cards"><p></p></div>
+          <div *ngIf="getCurrentParticipant().name == p.name" class="participant-name"><b>{{ p.name }}</b></div>
+          <div  *ngIf="getCurrentParticipant().name != p.name" class="participant-name">{{ p.name }}</div>
+          <div data-card="5" class="bg-danger cards"><p></p></div>
         </td>
       </tr>
       </tbody>

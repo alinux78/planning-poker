@@ -23,13 +23,13 @@ export class ParticipantFormComponent {
 
   onSubmit() {
     if (this.participant.name) {
-      this.participantService.save(this.participant).subscribe(() => {
-        setCurrentParticipant(this.participant);
-        this.gotoParticipantsList();
-      });
-    } else {
-      this.gotoParticipantsList()
-    }
+      this.participantService.save(this.participant);
+      this.gotoParticipantsList();
+    } 
+  }
+
+  get currentParticipant(): Participant {
+    return this.participantService.localParticipant;
   }
 
   gotoParticipantsList() {

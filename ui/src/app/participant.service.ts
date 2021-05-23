@@ -8,7 +8,7 @@ export class ParticipantService {
 
   private participantsUrl: string;
 
-  private localParticipant: Participant;
+  public localParticipant: Participant;
 
   constructor(private http: HttpClient) {
     this.participantsUrl = 'http://localhost:8080/participants';
@@ -19,9 +19,8 @@ export class ParticipantService {
   }
 
   public save(participant: Participant) {
-    return this.http.put<Participant>(this.participantsUrl + "/" + participant.name, "").subscribe( p => this.localParticipant = JSON.parse(p) as Participant);
+    return this.http.put<Participant>(this.participantsUrl + "/" + participant.name, "").subscribe( p => this.localParticipant = p);
   }
-
 
 
   public remove(participant: Participant) {
